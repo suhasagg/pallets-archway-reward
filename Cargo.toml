@@ -1,0 +1,29 @@
+[package]
+name = "pallet-archway-reward"
+version = "0.1.0"
+description = "An example of an Archway-like reward distribution pallet in Substrate"
+edition = "2021"
+license = "Unlicense"
+publish = false
+
+[dependencies]
+frame-support = { version = "4.0.0-dev", default-features = false, features = ["std"] }
+frame-system = { version = "4.0.0-dev", default-features = false, features = ["std"] }
+sp-std = { version = "4.0.0-dev", default-features = false }
+sp-runtime = { version = "4.0.0-dev", default-features = false, features = ["std"] }
+scale-info = { version = "2.3.0", default-features = false, features = ["derive"], optional = true }
+
+[dev-dependencies]
+frame-support = { version = "4.0.0-dev", default-features = false, features = ["std"] }
+frame-system = { version = "4.0.0-dev", default-features = false, features = ["std"] }
+
+[features]
+default = ["std"]
+std = [
+    "frame-support/std",
+    "frame-system/std",
+    "sp-runtime/std",
+    "sp-std/std",
+    "scale-info/std"
+]
+
